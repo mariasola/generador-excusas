@@ -1,6 +1,8 @@
 "use-strict";
 const btn = document.querySelector(".btn");
-const generator = document.querySelector(".generator");
+const excuse = document.querySelector(".excuse");
+const btnFavorites = document.querySelector(".excuse_button");
+const favorites = document.querySelector(".favorites");
 
 const subject = [
   "perro",
@@ -62,13 +64,21 @@ const attribute = [
 ];
 
 const whoDidWhat = a => a[Math.round(Math.random() * (a.length - 1))];
-
-function getExcuse() {
+let currentExcuse;
+const getExcuse = function() {
   const who = whoDidWhat(subject);
   const did = whoDidWhat(verb);
   const what = whoDidWhat(attribute);
-  generator.classList.add("show_generator");
+  excuse.classList.remove("hidden");
   document.getElementById("generator").innerHTML =
     "<div>Mi " + who + " ha " + did + " " + what + ".</div>";
+  currentExcuse = document.getElementById("generator").innerHTML;
+  return currentExcuse;
+};
+function saveFavorites() {
+  favorites.innerHTML += `<li> ${currentExcuse}</li>`;
+  favorites.classList.remove("hidden");
 }
+
+btnFavorites.addEventListener("click", saveFavorites);
 btn.addEventListener("click", getExcuse);

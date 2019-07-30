@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./starship.png">
+    <link rel="icon" href="./img/starship.png">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800&display=swap" rel="stylesheet">
     <title>Generador automático</title>
     <link rel="stylesheet" href="./main.css">
@@ -13,7 +13,13 @@
     <h1 class="title">Generador de excusas</h1>  
     <p class="subtitle">Mi perro se ha comido los apuntes es cosa del pasado, hay que reinventarse en esto de las excusas.</p>
     <button class="btn"><span>¡</span><span>D</span><span>A</span><span>L</span><span>E</span><span>!</span></button>
-    <div class="generator" id="generator"></div>
+    <div class="excuse hidden">
+        <div class="excuse_generator" id="generator"></div>
+        <button class="excuse_button">
+            <img class="excuse_img" src="./img/star.png" alt="Guardar como favorita">
+        </button>
+    </div>
+    <ul class="favorites hidden"></ul>
     <script type="text/javascript" src="./mains.js"></script>
 </body>
 </html>
