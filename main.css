@@ -29,9 +29,13 @@
     position: relative;
     background-color: transparent;
     border: none;
+    cursor: pointer;
     /* display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly; */
+}
+.btn:focus {
+    outline: none;
 }
 span{
     position:absolute;
@@ -41,7 +45,7 @@ span:nth-of-type(1){
     animation: wave 1s ease-in-out infinite alternate 0.05s;
 }
 span:nth-of-type(2){
-    left: 23px;
+    left: 18px;
     animation: wave 1s ease-in-out infinite alternate 0.10s;
 }
 span:nth-of-type(3){
@@ -49,15 +53,15 @@ span:nth-of-type(3){
     animation: wave 1s ease-in-out infinite alternate 0.15s;
 }
 span:nth-of-type(4){
-    left:63px;
+    left:69px;
     animation: wave 1s ease-in-out infinite alternate 0.20s;
 }
 span:nth-of-type(5){
-    left:83px;
+    left:92px;
     animation: wave 1s ease-in-out infinite alternate 0.25s;
 }
 span:nth-of-type(6){
-    left:103px;
+    left:121px;
     animation: wave 1s ease-in-out infinite alternate 0.30s;
 }
 .generator{
@@ -72,8 +76,8 @@ span:nth-of-type(6){
     display: block;
 }
 @keyframes wave {
-    0%{ top: 0%; }
-    100%{ top: 100%; }
+    0%{ top: -50%; }
+    100%{ top: 50%; }
 }
 
 

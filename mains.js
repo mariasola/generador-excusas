@@ -18,7 +18,9 @@ const subject = [
   "hermana",
   "sofá",
   "escoba",
-  "estropajo"
+  "estropajo",
+  "elfo doméstico",
+  "gamusino"
 ];
 const verb = [
   "comido",
@@ -37,7 +39,10 @@ const verb = [
   "roto",
   "tirado",
   "mordido",
-  "cantado"
+  "cantado",
+  "saltado",
+  "escalado",
+  "volado"
 ];
 const attribute = [
   "el café",
@@ -49,18 +54,21 @@ const attribute = [
   "al miedo",
   "la puerta",
   "el váter",
-  "el enchufe"
+  "el enchufe",
+  "la varita",
+  "sus sentimientos",
+  "a un dinosaurio",
+  "un calcetín"
 ];
 
-let who = subject[Math.round(Math.random() * (subject.length - 1))];
-let did = verb[Math.round(Math.random() * (verb.length - 1))];
-let what = attribute[Math.round(Math.random() * (attribute.length - 1))];
+const whoDidWhat = a => a[Math.round(Math.random() * (a.length - 1))];
 
-function excuse() {
+function getExcuse() {
+  const who = whoDidWhat(subject);
+  const did = whoDidWhat(verb);
+  const what = whoDidWhat(attribute);
   generator.classList.add("show_generator");
   document.getElementById("generator").innerHTML =
     "<div>Mi " + who + " ha " + did + " " + what + ".</div>";
 }
-btn.addEventListener("click", excuse);
-//si algunos verbos tienen "se ha" delante y otros "ha" como distingue unos de otros?
-// se puede detectar el articulo solo?
+btn.addEventListener("click", getExcuse);
