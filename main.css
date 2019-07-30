@@ -92,7 +92,7 @@ span:nth-of-type(6){
 }
 @media all and (max-width: 400px){
     .excuse_generator{
-        margin:7px;
+        margin:5px;
         font-size: 19px;
     }
 }
