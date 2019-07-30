@@ -13,9 +13,19 @@
     margin:20px;
     font-size: 64px;
 }
+@media all and (max-width: 400px){
+    .title{
+        font-size: 40px;
+    }
+}
 .subtitle{
     margin:40px;
     font-size: 20px;
+}
+@media all and (max-width: 400px){
+    .subtitle{
+        font-size: 20px;
+    }
 }
 .btn{
     width: 120px;
@@ -80,6 +90,12 @@ span:nth-of-type(6){
     padding:10px;
     font-size: 25px;
 }
+@media all and (max-width: 400px){
+    .excuse_generator{
+        margin:7px;
+        font-size: 19px;
+    }
+}
 .excuse_button{
     width: 30px;
     height: 30px;
@@ -88,6 +104,12 @@ span:nth-of-type(6){
     border-radius: 50%;
     border: gold solid 2px;
     cursor: pointer;
+}
+@media all and (max-width: 400px){
+    .excuse_button{
+        width: 22px;
+        height: 22px;
+    }
 }
 .excuse_img{
     width: 100%;
