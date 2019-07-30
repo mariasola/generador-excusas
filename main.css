@@ -83,6 +83,11 @@ span:nth-of-type(6){
     flex-direction: row;
 
 }
+@media all and (max-width: 400px){
+    .excuse{
+        flex-direction: column;
+    }
+}
 .excuse_generator{
     margin: 20px;
     border: #D6A2E8 solid 4px;
@@ -92,7 +97,7 @@ span:nth-of-type(6){
 }
 @media all and (max-width: 400px){
     .excuse_generator{
-        margin:5px;
+        margin:10px;
         font-size: 19px;
     }
 }
@@ -113,6 +118,14 @@ span:nth-of-type(6){
 }
 .excuse_img{
     width: 100%;
+}
+.excuse_msg{
+    display:none;
+}
+@media all and (max-width: 400px){
+    .excuse_msg{
+        display:inline;
+    }
 }
 .favorites{
     display: flex;
